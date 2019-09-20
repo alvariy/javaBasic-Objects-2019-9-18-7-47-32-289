@@ -77,3 +77,138 @@ You could run unit tests with the help of IntelliJ. But it is also possible to r
 
 If you just want to build your code without running test. Please use `./gradlew build -x test
 `
+
+
+should_point_to_the_same_object
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objects.html
+- A typical Java program creates many objects, which as you know, interact by invoking methods. 
+2.Why the test failed at first?
+- I thought that both objects are not the same, that they are not similar in some ways.
+3.Why you corrected the test that way?
+- I used true value because sameReference object has the same value, or is the same object as objectReference.
+4.Do you have further questions on this knowledge point?
+- None
+
+
+should_point_to_different_object
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objects.html
+- That both Objects is not equal even if they have the same value
+2.Why the test failed at first?
+- I thought that both objects are the same, that they are similar.
+3.Why you corrected the test that way?
+- I used false value because gooDay LocalDate is not the same as sameDay even if they are similar in values
+4.Do you have further questions on this knowledge point?
+- Not sure on what is the difference between those two. 
+
+should_initialized_to_default_value:
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- To know the default value of objects or classes if you return a non valued getter.
+2.Why the test failed at first?
+- I do not know what the default value of those methods of functions for their types.
+3.Why you corrected the test that way?
+- for int, the return values is 0, while for both String nad LocalDate the return value is null.
+4.Do you have further questions on this knowledge point?
+- none
+
+should_pass_by_value:
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- To know if a variable would change its value globaly if you initiate a method.
+2.Why the test failed at first?
+- I thought that the value would change to 7.
+3.Why you corrected the test that way?
+- I realized that the value would not change globaly.
+4.Do you have further questions on this knowledge point?
+- none
+
+should_pass_by_value_continued:
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- same as the first one but in Object.
+2.Why the test failed at first?
+- No failed test
+3.Why you corrected the test that way?
+- I realized that the object would not change globally.
+4.Do you have further questions on this knowledge point?
+- none
+
+should_modify_internal_state:
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- By this case, the state was changed so the value of the instance changed.
+2.Why the test failed at first?
+- I thought that this is the same as a normal type
+3.Why you corrected the test that way?
+- I realized that the object state will change if you altered it in a method.
+4.Do you have further questions on this knowledge point?
+- none
+
+should_choose_method_at_compile_time
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- By this case, the method returned a string "methodWithOneParameter(Object)".
+2.Why the test failed at first?
+- No test failed
+3.Why you corrected the test that way?
+- When I saw return methodWithOneParameter(Object)
+4.Do you have further questions on this knowledge point?
+- none
+
+should_choose_the_most_specific_overload
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- By this case, the method returned a string "methodWithTwoParameters(String, Integer)".
+2.Why the test failed at first?
+- No test failed
+3.Why you corrected the test that way?
+- When I saw return "methodWithTwoParameters(String, Integer)"
+4.Do you have further questions on this knowledge point?
+- none
+
+should_calling_another_constructor
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- By this case, you can use the values inside the class to be returned.
+2.Why the test failed at first?
+- No test failed
+3.Why you corrected the test that way?
+- When I saw name: "Untitled"
+4.Do you have further questions on this knowledge point?
+- none
+
+should_get_initialization_ordering
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- Not sure what happened
+2.Why the test failed at first?
+- 
+3.Why you corrected the test that way?
+- 
+4.Do you have further questions on this knowledge point?
+- What happened?
+
+should_get_message_of_var_length_parameters
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- Append arguments 1,2,3 to string
+2.Why the test failed at first?
+- no test failed
+3.Why you corrected the test that way?
+- the method or function used a for each loop to append or concat new lines for 1,2,3
+4.Do you have further questions on this knowledge point?
+- none
+
+should_get_message_of_var_length_parameters_2
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://docs.oracle.com/javase/tutorial/java/javaOO/objectcreation.html
+- Append Obect {1,2,3}
+2.Why the test failed at first?
+- I thought that it would return a value of {1,2,3}\n
+3.Why you corrected the test that way?
+- the method or function used a for each loop to append or concat new lines for 1,2,3
+- Also, new Object[] {1, 2, 3} is the same as the first method should_get_message_of_var_length_parameters but in different form or arguments or parameters
+4.Do you have further questions on this knowledge point?
+- none
