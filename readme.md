@@ -212,3 +212,114 @@ should_get_message_of_var_length_parameters_2
 - Also, new Object[] {1, 2, 3} is the same as the first method should_get_message_of_var_length_parameters but in different form or arguments or parameters
 4.Do you have further questions on this knowledge point?
 - none
+
+should_be_derived_from_object_class:
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- https://www.oracle.com/technetwork/articles/java/javareflection-1536171.html
+- Obejct.class 
+2.Why the test failed at first?
+- I do not know what is the expected output
+3.Why you corrected the test that way?
+- As I see the test failure, I saw that it is expecting a java object and I saw that SimpleEmptyClass might be an Object.class
+4.Do you have further questions on this knowledge point?
+- none
+
+should_call_super_class_constructor:
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- Used of extends in classes
+2.Why the test failed at first?
+- No Test Fail
+3.Why you corrected the test that way?
+- As I see the extends SuperClassWithDefaultConstructor in DerivedFromSuperClassWithDefaultConstructor the function first used the methods in SuperClassWithDefaultConstructor then used the functions inside DerivedFromSuperClassWithDefaultConstructor
+4.Do you have further questions on this knowledge point?
+- none
+
+should_call_super_class_constructor_continued
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- That default methods inside a class will be triggered
+2.Why the test failed at first?
+- No Test Fail
+3.Why you corrected the test that way?
+- Because the function or methods that has no parameters will be triggered and the one with a parameter int also, will be triggered
+4.Do you have further questions on this knowledge point?
+- none
+
+should_call_super_class_constructor_more
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- Not sure
+2.Why the test failed at first?
+- I thought that the default methods with no parameters will be triggered
+3.Why you corrected the test that way?
+- the test was expecting 2 values, so I put the return value of the methods with String arguments
+4.Do you have further questions on this knowledge point?
+- Why are the funtion with no arguments not triggered?
+
+should_call_most_derived_methods:
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- Not because the main Class is BaseClassForOverriding it will call first its function
+2.Why the test failed at first?
+- No test fail
+3.Why you corrected the test that way?
+- because of new DerivedFromBaseClassForOverriding();
+4.Do you have further questions on this knowledge point?
+- None
+
+should_call_super_class_methods
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- Used again extend to call the function of BaseClassForOverriding
+2.Why the test failed at first?
+- No test fail
+3.Why you corrected the test that way?
+- because of the concatination inside DerivedFromBaseClassForOverridingCallingSuper
+4.Do you have further questions on this knowledge point?
+- None
+
+should_use_caution_when_dealing_with_array_type:
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- Not the same class
+2.Why the test failed at first?
+- No test fail
+3.Why you corrected the test that way?
+- Not the same class to be compared
+4.Do you have further questions on this knowledge point?
+- None
+
+should_not_make_you_confused
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- Do not be confused because the Variables class is different with the instantiated class
+2.Why the test failed at first?
+- No test fail
+3.Why you corrected the test that way?
+- because of new NestedDerivedClassWithName()
+4.Do you have further questions on this knowledge point?
+- None
+
+should_not_make_you_confused_2
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- Do not be confused because inside the class, there are no functions.
+2.Why the test failed at first?
+- No test fail
+3.Why you corrected the test that way?
+- because of extends BaseClassWithName
+4.Do you have further questions on this knowledge point?
+- None
+
+should_use_instance_of_to_determine_inheritance_relationship
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- a static nested class is essentially a normal class that has just been nested inside another class. Being static, a static nested class
+2.Why the test failed at first?
+- Because I though that the base class is not nested because it is a base calss with no extends
+3.Why you corrected the test that way?
+- because of instanceof NestedDerivedClassWithName 
+4.Do you have further questions on this knowledge point?
+- None
+
+should_use_instance_of_only_in_inheritance_relationship
+1.What is the knowledge point of the test? Where is the official document to the knowledge point?
+- a static nested class is essentially a normal class that has just been nested inside another class. Being static, a static nested class
+2.Why the test failed at first?
+- Because I though that the base class is not nested because it is a base calss with no extends
+3.Why you corrected the test that way?
+- because of instanceof NestedDerivedClassWithName 
+4.Do you have further questions on this knowledge point?
+- None
